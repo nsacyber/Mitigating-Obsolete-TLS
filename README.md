@@ -1,12 +1,12 @@
 # Mitigating Obsolete TLS
 
-This repository contains a number of tools, signatures, and configurations to help networks detect and remediate the use of obsolete TLS. More information about this topic is available in NSA guidance on **Obsolete Transport Layer Security (TLS) Protocol Detection and Remediation** at https://www.nsa.gov/cybersecurity-guidance. 
+This repository lists a number of tools, signatures, and configurations to help network owners detect and remediate the use of obsolete TLS. More information is available in NSA cybsecurity information sheet [Eliminating Obsolete Transport Layer Security (TLS) Protocol Configurations](https://media.defense.gov/2021/Jan/05/2002560140/-1/-1/0/ELIMINATING_OBSOLETE_TLS_UOO197443-20.PDF).
 
 ## Background
 
 Encryption protocols, such as Transport Layer Security (TLS) and Secure Sockets Layer (SSL), provide data protection as it travels through a network. However, older versions of these protocols become obsolete as technology changes and vulnerabilities surface. Network connections employing obsolete encryption protocols are at an elevated risk of exploitation and decryption. As a result, all systems should detect and remediate the use of deprecated forms of encryption for TLS and SSL protocols.
 
-See the [TLS background information page](./TLS%20background%20information.md) for more information.
+See the TLS [background information page](./Background%20Information.md) for more information.
 
 ## Detecting Obsolete TLS
 

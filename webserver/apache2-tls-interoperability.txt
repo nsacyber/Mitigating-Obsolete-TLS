@@ -1,0 +1,31 @@
+#save as /etc/apache2/sites-enabled/000-default.conf
+
+<VirtualHost *:443>
+	
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+
+	SSLEngine On
+	SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+	SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-CCM:ECDHE-ECDSA-AES256-CCM-8:ECDHE-ECDSA-AES256-CBC-SHA384:DHE-RSA-AES256-CCM:DHE-RSA-AES256-CCM-8:ECDHE-RSA-AES256-CBC-SHA384:DHE-RSA-AES256-CBC-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-CCM:ECDHE-ECDSA-AES128-CCM-8:ECDHE-ECDSA-AES128-CBC-SHA256:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES128-CCM:DHE-RSA-AES128-CCM-8:ECDHE-RSA-AES128-CBC-SHA256:DHE-RSA-AES128-CBC-SHA256:ECDHE-ECDSA-AES256-CBC-SHA:ECDHE-RSA-AES256-CBC-SHA:DHE-RSA-AES256-CBC-SHA:ECDHE-ECDSA-AES128-CBC-SHA:ECDHE-RSA-AES128-CBC-SHA:DHE-RSA-AES128-CBC-SHA:
+	SSLCipherSuite TLSv1.3 TLS_AES_256_GCM_SHA384:TLS_AES_128_GCM_SHA256:TLS_AES_128_CCM_SHA256:TLS_AES_128_CCM_8_SHA256
+	SSLOpenSSLConfCmd Curves secp384r1:secp521r1:secp224r1:sect571r1:sect571k1:sect409r1:sect409k1:sect283r1:sect283k1:sect233r1:sect233k1
+	SSLHonorCipherOrder On
+	SSLSessionTickets Off
+
+	# Change these to the server certificate and key file
+	SSLCertificateFile /etc/ssl/certs/ssl-server-cert.pem
+	SSLCertificateKeyFile /etc/ssl/private/ssl-server-cert-key.key
+
+	# enable HTTP/2, if available
+	Protocols h2 http/1.1
+	# HTTP Strict Transport Security (mod_headers is required) (63072000 seconds)
+	# use bash command "a2enmod headers" to load headers module
+	Header always set Strict-Transport-Security "max-age=63072000"
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+
+

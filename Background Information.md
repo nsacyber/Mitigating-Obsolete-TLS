@@ -10,13 +10,13 @@ TLS packets have a basic structure for all transaction types. Byte evaluation is
 
 This is the general format for all TLS packets:
 
-![TLS Packet Data Structure](/.figures/tls%20packet%20data%20structure.png)
+![TLS Packet Data Structure](./figures/tls%20packet%20data%20structure.png)
 
 ### Identifying handshake messages
 
 The Message Type can have several different values for the transaction type that is occurring. For purposes of this document, look for hex value 0x16 to be present in byte 0 of the packet's application data, symbolizing the Handshake transaction. The TLS record version being used is then identified with the Major and Minor Version bytes (1 and 2) within the TLS application packet. For TLS 1.0 through TLS 1.2, the record version may not indicate the TLS version supported for either the client or the server and should not be used for identifying obsolete TLS versions. For TLS 1.3, the record version may indicate either TLS 1.3 or TLS 1.2 and is not useful for distinguishing the negotiated TLS version
 
-![Example Hex Dump of TLS Header](/.figures/example%20hex%20dump%20of%20tls%20header.png.png)
+![Example Hex Dump of TLS Header](./figures/example%20hex%20dump%20of%20tls%20header.png)
 
 ## TLS Handshake Transaction Packet Structure
 

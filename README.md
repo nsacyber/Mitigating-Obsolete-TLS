@@ -29,18 +29,15 @@ The following example tools claim to be able to scan for obsolete cryptography. 
 ### SNORT Rules
 The provided SNORT rules are alerting rules. Investigation for accuracy is required for hits. The rules have been tested, but every system can be configured differently, so ensure that the signature is triggered properly or is adjusted as needed based on the sensors and the environment.
 
-See the [SNORT Rules page](./snort/README.md) for more information.
+See the [SNORT rules page](./snort/README.md) for more information.
 
 ## Detecting Secure TLS
 
-See the [SNORT Rules page](./snort/README.md) for more information.
+See the [SNORT rules page](./snort/README.md) for more information.
 
 ## Secure TLS Web Server Configurations
 
-* [Apache HTTP Server](./webserver/apache-tls.txt)
-* [Microsoft Internet Information Services](./webserver/iis-tls.txt)
-* [NGINX](./webserver/nginx-tls.txt)
-* [Node.js](./webserver/nodejs-tls.txt)
+See the [web server configuration page](./webserver/README.md) for more information.
 
 ## License
 

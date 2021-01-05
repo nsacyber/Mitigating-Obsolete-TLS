@@ -14,8 +14,7 @@ interoperability in this script before running.
 
 Microsoft, "HSTS Setting for a Web Site <hsts>," Microsoft, 16 April 2019.
 [Online]. Available:
-https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/si
-tes/site/hsts. [Accessed 4 January 2021].
+https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/site/hsts. [Accessed 4 January 2021].
 
 3. Reboot Windows Server to have the changes take effect. 
 

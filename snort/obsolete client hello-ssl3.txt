@@ -1,0 +1,3 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 443 (msg: "SSL 3.0 using preprocessor version and state client_hello";  flow:to_server,established; ssl_version:sslv3; ssl_state:client_hello; sid:170004;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET 443 (msg: "SSL 3.0 using hex version and state client_hello";  flow:to_server,established; content: "|16|"; depth:1; content:"|01|"; distance:4; within:1; content: "|03 00|"; distance:3; within:2;  sid:170005;)
+alert tcp $HOME_NET any -> $EXTERNAL_NET 443 (msg: "SSL 3.0 using hex and preprocessor in client_hello without record header"; flow:to_server,established; ssl_state:client_hello; content: "|01 03 00|"; sid:170006;)

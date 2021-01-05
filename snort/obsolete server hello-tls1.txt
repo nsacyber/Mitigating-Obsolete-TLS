@@ -1,0 +1,2 @@
+alert tcp $HOME_NET 443 -> $EXTERNAL_NET any (msg: "TLS 1.0 using preprocessor version and state server_hello"; flow:to_client,established; ssl_version:tls1.0; ssl_state:server_hello; sid:170020;)
+alert tcp $HOME_NET 443 -> $EXTERNAL_NET any (msg: "TLS 1.0 using hex version and state server_hello"; flow:to_client,established; content: "|16|"; depth:1; content:"|02|"; distance:4; within:1; content:"|03 01|"; distance:3; within:2; sid:170021;)

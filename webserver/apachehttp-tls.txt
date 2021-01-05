@@ -1,0 +1,30 @@
+#save as /etc/apache2/sites-available/000-default.conf
+<VirtualHost 127.0.0.1:443>
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html
+
+	SSLEngine On
+	SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+    SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:RSA-AES256-GCM-SHA384
+
+	SSLCipherSuite TLSv1.3 TLS_AES_256_GCM_SHA384
+
+	SSLOpenSSLConfCmd Curves secp384r1
+
+	SSLHonorCipherOrder On
+	SSLSessionTickets Off
+
+	# Change these to the server certificate and key file
+	SSLCertificateFile /etc/ssl/certs/ssl-server-cert.pem
+	SSLCertificateKeyFile /etc/ssl/private/ssl-server-cert-key.key
+
+	# enable HTTP/2, if available
+	Protocols h2 http/1.1
+	# HTTP Strict Transport Security (mod_headers is required) (63072000 seconds)
+	# use bash command "a2enmod headers" to load headers module
+	Header always set Strict-Transport-Security "max-age=63072000"
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>

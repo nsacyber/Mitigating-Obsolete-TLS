@@ -1,0 +1,10 @@
+1 In your site bindings in IIS Manager, make sure https is enabled and **Disable Legacy TLS** is selected.
+1 Open Group Policy Editor
+1 Navigate to **Administrative Templates** > **Network** > **SSL Configuration Settings**
+1 In **SSL Configuration Settings**, double click **SSL Cipher Suite Order**
+1 Click **Enabled**
+1 Copy and paste the following string into **SSL Cipher Suites**: TLS_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384 
+1 Click **Next Setting**. This should proceed to **ECC Curve Order**
+1 Click **Enabled**
+1 Copy and paste the following strings into **ECC Curve Order**: secp384r1
+1 Click **Apply** and **OK** Note: If there are errors saying "No text was entered for this field", the list may have to be typed manually.

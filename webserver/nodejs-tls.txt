@@ -2,13 +2,13 @@
 // run with: node server.js
 const https = require("https"), fs = require("fs"), express = require("express"), helmet = require("helmet");
 const options = {
-key: fs.readFileSync("/etc/ssl/private/ssl-server-cert-key.key"),
-cert: fs.readFileSync("/etc/ssl/certs/ssl-server-cert.pem"),
-ciphers: "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:RSA-AES256-GCM-SHA384",
-ecdhCurve: "secp384r1",
-honorCipherOrder: true,
-minVersion: "TLSv1.2",
-maxVersion: "TLSv1.3"
+    key: fs.readFileSync("/etc/ssl/private/ssl-server-cert-key.key"),
+    cert: fs.readFileSync("/etc/ssl/certs/ssl-server-cert.pem"),
+    ciphers: "TLS_AES_256_GCM_SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:RSA-AES256-GCM-SHA384",
+    ecdhCurve: "secp384r1",
+    honorCipherOrder: true,
+    minVersion: "TLSv1.2",
+    maxVersion: "TLSv1.3"
 };
 
 const app = express();
@@ -21,4 +21,5 @@ res.end("test app\n");
 });
 
 
-https.createServer(options, app).listen(443, "localhost");
+https.createServer(options, app).listen(443);
+

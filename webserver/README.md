@@ -1,4 +1,4 @@
-# Secure TLS Web Server Coniguration
+# Secure TLS Web Server Configuration
 
 This page lists references to files that contain secure TLS configurations for a few commonly used web servers.
 

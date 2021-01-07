@@ -1,6 +1,7 @@
 # Mitigating Obsolete TLS
 
 This repository lists a number of tools, SNORT signatures, and web server configurations to help network owners detect and remediate the use of obsolete TLS. More information is available in NSA Cybsecurity Information Sheet (CSI) **Eliminating Obsolete Transport Layer Security (TLS) Protocol Configurations**:
+
 * [Press release](https://www.nsa.gov/News-Features/Feature-Stories/Article-View/Article/2462345/nsa-releases-eliminating-obsolete-transport-layer-security-tls-protocol-configu/)
 * [Infographic](https://media.defense.gov/2021/Jan/05/2002560126/-1/-1/0/ELIMINATING%20OBE%20TLS%20INFOGRAPHIC.PDF/ELIMINATING%20OBE%20TLS%20INFOGRAPHIC.PDF)
 * [CSI](https://media.defense.gov/2021/Jan/05/2002560140/-1/-1/0/ELIMINATING_OBSOLETE_TLS_UOO197443-20.PDF)

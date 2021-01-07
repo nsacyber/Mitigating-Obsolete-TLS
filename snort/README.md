@@ -13,7 +13,7 @@ This page lists references to files that contain SNORT rules.
 * Server Hello TLS 1.0: obsolete server hello-tls1.txt
 * Server Hello SSL TLS 1.1: obsolete server hello-tls11.txt
 
-## Dectecting Secure TLS
+## Detecting Secure TLS
 
 * Client Hello TLS 1.2 and TLS 1.3: secure client hello-tls12-tls13.txt
 * Server Hello TLS 1.2 and TLS 1.3: secure server hello-tls12-tls13.txt

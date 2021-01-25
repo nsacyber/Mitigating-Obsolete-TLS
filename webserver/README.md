@@ -20,4 +20,4 @@ This page lists references to files that contain secure TLS configurations for a
 ## NodeJS
 
 * [NodeJS CNSA](./nodejs-tls.txt)
-* [NodeJS CNSA](./nodejs-tls-interoperability.txt)
+* [NodeJS Interoperability](./nodejs-tls-interoperability.txt)

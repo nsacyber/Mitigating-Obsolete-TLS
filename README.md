@@ -32,6 +32,7 @@ The following example tools claim to be able to scan for obsolete cryptography.
 * https://www.hardenize.com
 * https://www.tenable.com/plugins/was/families/SSL%2FTLS for use with Tenable software.
 * https://github.com/drwetter/testssl.sh
+* https://github.com/rbsec/sslscan - a feature-rich command line SSL/TLS scanner with color-coded output; works on Windows, MacOS, and Linux.
 
 ### Configuration Tools
 

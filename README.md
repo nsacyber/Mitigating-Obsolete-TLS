@@ -24,6 +24,7 @@ The following example tools claim to be able to scan for obsolete cryptography.
 * https://github.com/18F/domain-scan - a scanner from GSA 18F to orchestrate scanning tools at scale. Can use the https://github.com/nabla-c0d3/sslyze Python package to scan for and report use of obsolete cryptography.
 * https://pentest-tools.com/network-vulnerability-scanning/ssl-tls-scanner
 * https://www.ssllabs.com/ssltest
+* https://testtls.com/ - allows scanning any TCP port, both on IPv4 and IPv6
 * https://gf.dev/tls-scanner
 * https://github.com/prbinu/tls-scan
 * https://www.thesslstore.com/ssltools/ssl-checker.php
